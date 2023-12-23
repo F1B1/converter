@@ -1,0 +1,191 @@
+
+.start {
+    position: relative;
+    padding-top: 150px;
+		&__container {
+		}
+
+        canvas{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+		&__body {
+            display: flex;
+            @include adaptiveValue("padding-top",50 ,40,1 );
+            align-items:center;
+            position: relative;
+            @media (max-width:$tablet){
+                 flex-direction: column; 
+            }
+		}
+
+		&__info {
+            flex: 0 1 45%;
+            text-wrap: balance;
+            position: relative;
+            margin: 0px 40px 0px 0px;
+            @media (max-width:$tablet){
+                margin: 0px 0px 50px 0px;
+            }
+		}
+
+        &__thumb-info-circle{
+            animation: shakeApp 5s linear infinite;
+            position: absolute;
+            left: -5%;
+            top: 15%;
+            @media (max-width:$mobile){
+                 display: none; 
+            }
+        }
+        &__thumb-info-cross{
+            animation: shakeApp 4.7s linear infinite;
+            position: absolute;
+            left: -5%;
+            bottom: 0;
+            @media (max-width:$mobile){
+                display: none; 
+           }
+        }
+
+		&__title {
+            @include adaptiveValue("font-size",48 ,28,1 );
+            font-weight: 700;
+            padding: 0px 0px 15px 0px;
+            position: relative;
+            z-index: 2;
+		}
+
+		&__sub-title {
+            color: transparent;
+            -webkit-text-stroke: 2px var(--orange);
+            text-stroke: 2px var(--orange);
+            -webkit-background-clip: text;
+            background-clip: text;
+            @include adaptiveValue("font-size", 42,24,1 );
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            
+		}
+
+		&__text {
+            color: var(--grey);
+            font-size: rem(18);
+            position: relative;
+            z-index: 1;
+            padding: 20px 0;
+		}
+
+		&__button {
+            display: flex;
+            justify-content:center;align-items: center;
+            min-height: 50px;
+            border-radius: 10px;
+            background-color:var(--orange) ;
+            background-image: linear-gradient(180deg, rgba(252,202,66,1) 0%, rgb(247, 209, 107) 100%);
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 0%;
+            transition: background-size .5s, color 0s;
+            color: #000;
+            width: 200px;
+            position: relative;
+            &:hover{
+                background-size: 100% 100%;
+            }
+		}
+
+        &__app {
+            flex: 0 1 55%;
+            position: relative;
+        }
+        &__thumb-app{
+            animation: shakeApp 4.5s linear infinite;
+            @media (max-width:$mobile){
+                display: none; 
+           }
+        }
+        &__image {
+            position: relative;
+        }
+    
+        &__spinner {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            animation: rotateRoundApp 20s linear infinite;
+            @media (max-width:$mobile){
+                left: 0;
+                top: 0;
+            }
+        }
+    
+        &__locked {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            animation: shakeApp 4s linear infinite;
+            @media (max-width:$mobileSmall){
+                 display: none; 
+            }
+        }
+    
+        &__guard {
+            position: absolute;
+            animation: shakeApp 5s linear infinite;
+            top: 50%;
+            right: 20%;
+            @media (max-width:$mobileSmall){
+                display: none; 
+           }
+        }
+}
+
+
+
+.shape{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    transform: rotate(-5deg);
+    border-radius: 150px/50px;
+    bottom: -50%;
+    left: -2%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, var(--orange), transparent);
+    &::before{
+        content: "";
+        position: absolute;
+        height: 96%;
+        width: 294px;
+        background: #050603;
+        left: 3px;
+        top: 2%;
+        border-radius: 50%;
+    }
+        
+}
+
+@keyframes shakeApp {
+    0%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes rotateRoundApp {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

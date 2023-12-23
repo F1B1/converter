@@ -1,0 +1,110 @@
+.process {
+    padding: 50px 0px 0px 0px;
+    &__container {
+    }
+
+    &__texts {
+        text-align: center;
+        padding: 0px 0px 60px 0px;
+        max-width: 600px;
+        margin: 0px auto;
+    }
+
+    &__short-title {
+        color: var(--orange);
+        font-size: rem(16);
+        padding: 0px 0px 10px 0px;
+    }
+
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size",32 ,18,1 );
+        padding: 0px 0px 15px 0px;
+    }
+
+    &__text {
+        color: var(--grey);
+        font-size: rem(16);
+        line-height: 156%;
+    }
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 0px 100px 0px;
+    }
+
+    &__column {
+        flex: 0 1 25%;
+        align-items:center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        &:hover{
+            .process__thumb{
+                background-color: var(--orange); 
+            }
+            .process__image{
+                img{
+                    transform: rotateY(180deg)
+                }
+            }
+            .process__sub-title{
+                color: var(--orange); 
+            }
+        }
+        @media (max-width:$tablet){
+            flex: 0 1 33.333%;
+            padding: 0px 0px 40px 0px;
+        }
+        @media (max-width:$mobile){
+            flex: 0 1 50%; 
+        }
+        @media (max-width: em(520)){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__image {
+        position: relative;
+        background-color: #17171d;
+        padding: 20px;
+        border-radius: 8px;
+        min-width: 219px;
+        display: flex;
+        justify-content: center;
+        img{
+            transition: all 0.4s ease 0s;
+        }
+    }
+
+    &__thumb {
+        background-color: #30303D;
+        padding: 8px 10px;
+        border-radius: 5px;
+        font-size: rem(18);
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+        transition: background-color 0.4s ease 0s;
+    }
+
+    &__info {
+        text-align: center;
+        margin: 0px auto;
+        max-width: 80%;
+    }
+
+    &__sub-title {
+        @include adaptiveValue("font-size",20 ,16,1 );
+        padding: 10px 0px 10px 0px;
+        transition: all 0.4s ease 0s;
+    }
+
+    &__sub-text {
+        font-size: rem(16);
+        color: var(--grey);
+        line-height: 156%;
+    }
+}

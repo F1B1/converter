@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Converter</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="#" class="header__logo">
+                <img src="img/start/logo.png" alt="cryptonit">
+            </a>
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__item itemMenu"><a href="#" class="header__link">Home</a>
+                    <button class="header__item-button">&#9650;</button>
+                    <ul class="header__sub-list">
+                        <li class="header__sub-item">
+                            <a href="#" class="header__sub-link">Info</a>
+                        </li>
+                        <li class="header__sub-item">
+                            <a href="#" class="header__sub-link">Main Home</a>
+                        </li>
+                        <li class="header__sub-item">
+                            <a href="#" class="header__sub-link">Something</a>
+                        </li>
+                        <li class="header__sub-item">
+                            <a href="#" class="header__sub-link">Info 2</a>
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="header__item"><a href="#" class="header__link">About</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Services</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Pages</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Blog</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="header__button">Register</a>
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+        </div>
+    </div>
+</header>
+			<main class="page">
+				<section class="start">
+					<div class="start__container container">
+						<div class="start__body">
+							<div class="start__info">
+								<h1 class="start__title">Experience of
+									Digital Transection</h1>
+								<h2 class="start__sub-title">Blockchain
+									<div class="shape"></div>
+								</h2>
+								<p class="start__text">Cryptography, encryption process of transforming information
+									referred to as plaintext) using done.</p>
+								<a href="#" class="start__button">Get Started Now</a>
+							</div>
+							<div class="start__app">
+								<div class="start__thumb-app">
+									<img src="img/start/cross.png" alt="cross">
+								</div>
+								<div class="start__image">
+									<img src="img/start/casino.png" alt="app">
+								</div>
+								<div class="start__spinner">
+									<img src="img/start/round.png" alt="round">
+								</div>
+								<div class="start__locked">
+									<img src="img/start/lock.png" alt="locked">
+								</div>
+								<div class="start__guard">
+									<img src="img/start/guard.png" alt="guarented">
+								</div>
+							</div>
+							<div class="start__thumb-info-circle">
+								<img src="img/start/half-circle.png" alt="circle">
+							</div>
+							<div class="start__thumb-info-cross">
+								<img src="img/start/cross.png" alt="cross">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="converter">
+					<div class="converter__container container">
+						<h1 class="converter__title">Find out the rate of absolutely any currency <span>right now</span></h1>
+						<article class="converter__body">
+							<div class="tabs">
+								<div class="tab active" data-tab="convert">
+									<div class="tab-icon">
+										<img src="img/converter/convert.svg" alt="">
+									</div>
+									<div class="tab-title">Convert</div>
+								</div>
+								<div class="tab" data-tab="single">
+									<div class="tab-icon">
+										<img src="img/converter/single.svg" alt="">
+									</div>
+									<div class="tab-title">Single</div>
+								</div>
+							</div>
+							<div class="content show" data-child="convert">
+								<form class="form">
+									<div class="form-inputs">
+										<div class="form-group">
+											<label for="amount">Amount</label>
+											<input type="number" name="amount" id="amount" placeholder="1.00" required>
+										</div>
+										<div class="form-selects">
+											<div class="form-select">
+												<label for="From">From</label>
+												<select class="select" name="from" id="from" required>
+													<option value="" disabled
+													selected hidden>Choose currency</option>
+												</select>
+											</div>
+											
+											<div class="form-select__icon switch-currencies">
+												<img src="img/converter/arrows.png" alt="">
+											</div>
+		
+											<div class="form-select">
+												<label for="to">To</label>
+												<select class="select" name="to" id="to" required>
+													<option value="" disabled
+													selected hidden>Choose currency</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="form-info">
+										<div class="loader">
+											<span></span>
+											<span></span>
+											<span></span>
+										</div>
+										<div class="form-results">
+											<div class="form-result__item from" id="resultFrom">
+												
+											</div>
+		
+											<div class="form-result__equals">
+												<img src="img/converter/equals.svg" alt="">
+											</div>
+		
+											<div class="form-result__item to" id="resultTo">
+												
+											</div>
+										</div>
+		
+										<button type="submit" class="form-submit">Convert</button>
+									</div>
+		
+									<div class="rate-information">
+										<div class="rate-conversion"></div>
+										<div class="rate-last"></div>
+									</div>
+								</form>
+							</div>
+		
+							<div class="content" data-child="single">
+								<div class="currency-wrapper">
+									<div class="currency-single">
+										<select class="select" id="singleSelect" required>
+											<option value="" disabled
+											selected hidden>Choose currency</option>
+										</select>
+										<div class="currency-single__item">
+											<div class="currency-item currency-current">
+												<div class="currency-titles">
+													<div class="currency-title">USD</div>
+													<div class="currency-full">American dollar</div>
+												</div>
+												<div class="currency-amount">1.00</div>
+												<div class="currency-action">
+													<button class="currency-change currency-button">
+														Change
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="currency-list">
+										
+									</div>
+								</div>
+								<div class="currency-add">
+									<button class="currency-add__button">Add currency</button>
+		
+									<select class="select" id="addCurrencySelect" required>
+										<option value="" disabled
+										selected hidden>Choose currency</option>
+									</select>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+				<section class="transaction">
+					<div class="transaction__container container">
+						<div class="transaction__body">
+							<div class="transaction__images">
+								<div class="transaction__image">
+									<img src="img/transaction/bitcoin.png" alt="bitcoin">
+								</div>
+								<div class="transaction__coin">
+									<img src="img/transaction/coin.png" alt="coin">
+								</div>
+								<div class="transaction__icon">
+									<img src="img/transaction/icon.png" alt="icon">
+								</div>
+							</div>
+							<div class="transaction__info">
+								<p class="transaction__short-titlet">TRANSACTIONS</p>
+								<div class="transaction__content">
+									<h2 class="transaction__title">Blockchain will Record
+										All Transactions</h2>
+									<p class="transaction__text">Rapidiously enhance B2C e-services before multifunctional partnerships. Energistically fabricate cross functional resources rather than excellent interfaces. Enthusiastically brand.</p>
+								</div>
+								<div class="transaction__content">
+									<h2 class="transaction__title">Energistically fabricate cross</h2>
+									<p class="transaction__text">Energistically fabricate cross functional resources rather than excellent interfaces. Enthusiastically brand.</p>
+								</div>
+								<div class="transaction__content">
+									<h2 class="transaction__title">Enthusiastically brand</h2>
+									<p class="transaction__text">Enthusiastically brand Rapidiously enhance B2C e-services before multifunctional partnerships.</p>
+								</div>
+								<div class="transaction__content">
+									<h2 class="transaction__title">Lorem</h2>
+									<p class="transaction__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, incidunt atque maiores perferendis excepturi iusto fugiat molestias, consectetur ipsum dolorem repellendus sint delectus laboriosam nostrum doloremque provident soluta? Nihil, amet!</p>
+								</div>
+								<ul class="transaction__list">
+									<li class="transaction__item active" >Exchange Value</li>
+									<li class="transaction__item " >User Secuirity</li>
+									<li class="transaction__item " >User Dashboard</li>
+									<li class="transaction__item " >Asset Registries</li>
+								</ul>
+								<a href="#" class="transaction__button">Contact More</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="process">
+					<div class="process__container container">
+						<div class="process__texts">
+							<p class="process__short-title">WORK PROCESS</p>
+							<h2 class="process__title">Blockchain work Process</h2>
+							<p class="process__text">Rapidiously enhance service before multifunctional partnership cryptocurrency Energistically fabricate cross functional author done.</p>
+						</div>
+						<div class="process__columns">
+							<div class="process__column">
+								<div class="process__image">
+									<img src="img/process/process1.png" alt="img">
+									<span class="process__thumb">01</span>
+								</div>
+								<div class="process__info">
+									<h3 class="process__sub-title">Join Crypto</h3>
+									<p class="process__sub-text">Multifunctional partnershi Cryptocurrency</p>
+								</div>
+							</div>
+							<div class="process__column">
+								<div class="process__image">
+									<img src="img/process/process2.png" alt="img">
+									<span class="process__thumb">02</span>
+								</div>
+								<div class="process__info">
+									<h3 class="process__sub-title">Colect Bitcoin</h3>
+									<p class="process__sub-text">Multifunctional partnershi Cryptocurrency</p>
+								</div>
+							</div>
+							<div class="process__column">
+								<div class="process__image">
+									<img src="img/process/process3.png" alt="img">
+									<span class="process__thumb">03</span>
+								</div>
+								<div class="process__info">
+									<h3 class="process__sub-title">Start Selling</h3>
+									<p class="process__sub-text">Multifunctional partnershi Cryptocurrency</p>
+								</div>
+							</div>
+							<div class="process__column">
+								<div class="process__image">
+									<img src="img/process/process4.png" alt="img">
+									<span class="process__thumb">04</span>
+								</div>
+								<div class="process__info">
+									<h3 class="process__sub-title">Paid Member</h3>
+									<p class="process__sub-text">Multifunctional partnershi Cryptocurrency</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__columns">
+            <div class="footer__left">
+                <div class="left-footer__column">
+                    <div class="left-footer__image">
+                        <img src="img/start/logo.png" alt="cryptobit">
+                        <p class="left-footer__text">Cryptocurrencies are used prim outside existing banking govern institutions hanged</p>
+                        <div class="left-footer__socials">
+                            <a href="#" class="left-footer__social">
+                                <img src="img/icons/inst.svg" alt="inst">
+                            </a>
+                            <a href="#" class="left-footer__social">
+                                <img src="img/icons/vk.svg" alt="inst">
+
+                            </a>
+                            <a href="#" class="left-footer__social">
+                                <img src="img/icons/tg.svg" alt="inst">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-footer__column">
+                    <h2 class="left-footer__title footer-title">Catagories</h2>
+                    <ul class="left-footer__list">
+                        <li class="left-footer__item"><a href="#" class="left-footer__link">What is ICO</a></li>
+                        <li class="left-footer__item"><a href="#" class="left-footer__link">Token</a></li>
+                        <li class="left-footer__item"><a href="#" class="left-footer__link">Advisor</a></li>
+                        <li class="left-footer__item"><a href="#" class="left-footer__link">Road Map</a></li>
+                        <li class="left-footer__item"><a href="#" class="left-footer__link">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="right-footer__column">
+                    <h2 class="right-footer__title footer-title">Catagories</h2>
+                    <ul class="right-footer__list">
+                        <li class="right-footer__item"><a href="#" class="right-footer__link">What is ICO</a></li>
+                        <li class="right-footer__item"><a href="#" class="right-footer__link">Token</a></li>
+                        <li class="right-footer__item"><a href="#" class="right-footer__link">Advisor</a></li>
+                        <li class="right-footer__item"><a href="#" class="right-footer__link">Road Map</a></li>
+                        <li class="right-footer__item"><a href="#" class="right-footer__link">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="right-footer__column">
+                    <h2 class="right-footer__title footer-title">Newsletter</h2>
+                    <p class="right-footer__text">Get now free 20% discount for all products on your first order</p>
+                    <form action="#" class="right-footer__form">
+                        <input autocomplete="off" type="email" name="email" placeholder="Enter Your E-Mail" class="right-footer__input">
+                        <button class="right-footer__button" type="button"><img src="img/icons/send.png" alt="send"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+		</div>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>
